@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h2 style="color: rebeccapurple;">Este es un HTML utilizando plantillas xd</h2>
+
+    {% if nombre_persona == 'Carla' %}
+        <p>El cursos lo imparte el profesor titular</p>
+    {% else %}
+        <p>eL CURSO LO IMPARTE EL PROFESOR SUPlente</p>
+
+    {% endif %}
+    
+    
+    
+    <p>Mi nombre es: {{nombre_persona.upper}} {{apellido_persona.lower}}</p>
+    <p>Estamos viendo platilas con fechas dia: {{momento_actual.day}} mes: {{momento_actual.month}} año:{{momento_actual.year}}    </p>
+    <p><strong>Temas del curso</strong></p>
+    <p>
+        <ul>
+        {% if temas %}
+        {% for el_tema in temas %}
+
+            <li>{{el_tema|first|lower}}</li> 
+
+
+        {% endfor %}
+        {% else %}
+        <p>no hay elementos</p>
+        {% endif %}
+        </ul>
+    </p>
+    
+
+</body>
+</html>
