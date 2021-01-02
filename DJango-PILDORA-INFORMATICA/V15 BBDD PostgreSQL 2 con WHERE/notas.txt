@@ -10,3 +10,9 @@
     AGREGAMOS CLIENTE
 3. cli = Cliente(nombre='juan',direccion='pastor sevilla',tfno='123456789')
 4. cli.save()
+
+
+**PALABRAS CLAVE:
+
+precio__lte=100-----> precio<=100
+precio__gte=100-----> precio>=100

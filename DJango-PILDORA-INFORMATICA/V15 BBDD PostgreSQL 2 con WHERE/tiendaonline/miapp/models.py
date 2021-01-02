@@ -13,6 +13,9 @@ class Articulo(models.Model):
     seccion=models.CharField(max_length=20)
     precio = models.IntegerField()
 
+    def __str__(self):
+        return "el nombre es: %s, la seccion es: %s, el precio es: %s" % (self.nombre,self.seccion,self.precio)
+
 class Pedido(models.Model):
     numero=models.IntegerField()
     fecha=models.DateTimeField()
