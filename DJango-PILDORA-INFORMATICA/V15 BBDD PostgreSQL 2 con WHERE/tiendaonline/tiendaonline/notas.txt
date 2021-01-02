@@ -1,0 +1,12 @@
+--PARA CREAR LAS TABLAS EN POSTGRESQL
+1. python manage.py makemigrations
+2. python manage.py sqlmigrate "Nombre de la aplicaccion" "version que sale en en comando anterior ejemplo= 0001"
+3. python manage.py migrate
+
+--PARA INSERTAR , ELIMINAR, MODIFICAR EN POSTGRESQL 
+
+1. python manage.py shell
+2. from "nombre de aplicacion".models import "tabla"
+    AGREGAMOS CLIENTE
+3. cli = Cliente(nombre='juan',direccion='pastor sevilla',tfno='123456789')
+4. cli.save()
