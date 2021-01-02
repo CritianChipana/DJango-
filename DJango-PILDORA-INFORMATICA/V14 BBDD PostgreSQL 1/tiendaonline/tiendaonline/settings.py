@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zfud+_9_d@)$q_e5fhas7%m(^ws3@dt9q09107kh%d_joiuy47'
+SECRET_KEY = '9)wsf&-xk97!qc1nh4+cpdmofv(+($=r_(-w-sf)j5z+_1emu+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gestionpedidos',
+    'miapp',
 ]
 
 MIDDLEWARE = [
@@ -74,17 +74,17 @@ WSGI_APPLICATION = 'tiendaonline.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'articulosclientes',
+        'NAME': 'cris',
         'USER': 'postgres',
         'PASSWORD': '12345678',
         'HOST': '127.0.0.1',
