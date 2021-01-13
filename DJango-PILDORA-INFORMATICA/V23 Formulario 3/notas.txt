@@ -16,3 +16,34 @@
 
 precio__lte=100-----> precio<=100
 precio__gte=100-----> precio>=100
+
+
+****************PASOS PARA MODIFICAR DATOS A UNA TABLA
+    art=Articulo.objects.get(id=2)
+    art.precio = 95
+    art.save()
+
+****************PASOS PARA ELIMINAR DATOS A UNA TABLA
+
+    art5=Articulo.objects.get(id=2)
+    art5.delete()
+
+****************PASOS PARA LISTAR DATOS A UNA TABLA
+
+    Lista=Articulo.objects.all()
+    Lista
+
+**************** BUSCAR DATOS DE LA TABLA
+
+def listar3(request):
+
+    if request.POST['codigo']:
+        codigo2=request.POST['codigo']
+        art = Articulo.objects.filter(seccion__icontains=codigo2)
+        return render(request,"buscar.html",{"art":art})
+        # mostrar = print(f"art")
+        # return HttpResponse(mostrar)
+        
+    else:
+        mensaje ="codigo no encontrado"
+        return HttpResponse(mensaje)
