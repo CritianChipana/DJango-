@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block titulo %}
+        {% endblock %}
+    </title>
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'css/stylos2.css' %}" />
+
+</head>
+<body>
+
+    <header>
+        <div id="logotipo">
+            <img src="{% static  'images/logoDJango.png' %}" alt="">
+            <h1>Proyecto Web</h1>
+        </div>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Index</a></li>
+            <li><a href="{% url 'saludo' %}">Bienvenida</a></li>
+            <li><a href="/rango/">Rango</a></li>
+            <li><a href="/rango2/">rango2</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+
+    <div id="content">
+        {% block contenido %}
+            <p>Este contenido es solo por defecto</p>
+        {% endblock %}
+    </div>
+
+
+    <footer>
+        Proyecto Prueba &copy; Cristian Chipana - {% now "d/m/y h:m:s" %}
+    </footer>
+</body>
+</html>

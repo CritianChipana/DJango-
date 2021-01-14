@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+
+{% block titulo %}
+    Bienvenida
+{% endblock  %}
+
+{% block contenido %}
+    <h2>Bienvenido al area de sistemas</h2>
+    <h4>Cordial Saludo estimado Colaborador</h4>
+    <p> Se desea que su vicita sea la mejor de todos la experiencias </p>
+    
+    <h3>Listado de estudiantes</h3>
+    
+    {% include 'listaestudiantes.html' with encabezado2="Estudiantes Registrados"  %}
+    {% include 'filter.html' with encabezado="Tipos de Filtro:" %}
+    
+{% endblock %}

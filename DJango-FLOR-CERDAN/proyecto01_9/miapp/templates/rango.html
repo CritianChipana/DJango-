@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block titulo %}
+    rango
+{% endblock titulo %}
+
+
+
+
+
+{% block contenido %}
+    <h2>Lista de Rango: [{{a}}][{{b}}]</h2>
+    {% for aa in rango_numeros %}
+    <p>{{aa}}</p>
+{%empty%}
+    <p>No hay datos</p>
+{% endfor %}
+
+
+{% load filters %}
+
+        {{"f"|rango|safe}}
+
+{% endblock contenido %}
